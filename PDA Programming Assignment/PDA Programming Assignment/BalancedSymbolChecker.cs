@@ -8,7 +8,7 @@ namespace PDA_Programming_Assignment
 {
     public class BalancedSymbolChecker : IStringChecker
     {
-        public bool isMatchingPair(char firstSymbol,  char secondSymbol)
+        public bool MatchingPair(char firstSymbol,  char secondSymbol)
         {
             if (firstSymbol == '(' && secondSymbol == ')')
                 return true;
@@ -43,7 +43,7 @@ namespace PDA_Programming_Assignment
                         return;
                     }
 
-                    else if (!isMatchingPair(stack.Pop(), input[i]))
+                    else if (!MatchingPair(stack.Pop(), input[i]))
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine($"{input} is not balanced.");
