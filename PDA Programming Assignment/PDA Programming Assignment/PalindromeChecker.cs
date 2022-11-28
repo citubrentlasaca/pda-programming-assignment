@@ -30,14 +30,16 @@ namespace PDA_Programming_Assignment
                 char element = stack.Pop();
                 if (element != input[i])
                 {
-                    Console.WriteLine("The inputted string is not a palindrome.");
-                }
-                else
-                {
-                    Console.WriteLine("The inputted string is a palindrome.");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{input} is not a palindrome.");
+                    Console.ResetColor();
+                    return;
                 }
                 i++;
             }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{input} is a palindrome.");
+            Console.ResetColor();
         }
     }
 }
